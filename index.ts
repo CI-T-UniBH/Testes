@@ -12,8 +12,8 @@ class DesafioQACIT {
         console.log('[DESAFIO CI&T - QA] Testes de Automação');
 
         this.buildDriver()
-            .then(async () => await this.start())
-            .catch(err => console.error('Não foi possível iniciar o driver do Selenium. Erro:\n', err));
+            .then(async () => await this.startTests())
+            .catch(err => console.error('Não foi possível iniciar o driver do Selenium.\n', err));
     }
 
     /**
@@ -33,11 +33,11 @@ class DesafioQACIT {
     }
 
     /**
-     * start
+     * startTests
      * 
      * Inicia a execução dos casos de teste
      */
-    private async start(): Promise<void> {
+    private async startTests(): Promise<void> {
         try {    
             console.log('\nIniciando casos de testes...');
 
@@ -65,11 +65,11 @@ class DesafioQACIT {
     }
     
     /**
-     * awaitPageLoads
+     * awaitPageRedirects
      * 
      * Aguarda determinada página carregar
      */
-     private async awaitPageLoads(url: string, delay: number = 5000): Promise<void> {
+     private async awaitPageRedirects(url: string, delay: number = 5000): Promise<void> {
         await this.driver!.wait(until.urlIs(url), delay);
     }
 
@@ -88,7 +88,7 @@ class DesafioQACIT {
         await (await this.driver!.findElement(By.partialLinkText('BROWSE'))).click();
         
         console.log('- Aguardando redirecionamento');
-        await this.awaitPageLoads('https://opentdb.com/browse.php', 10000);
+        await this.awaitPageRedirects('https://opentdb.com/browse.php', 10000);
         
         console.log('- Inserindo o termo desejado "Science: Computers" no campo de busca');
         await (await this.driver!.findElement(By.id('query'))).sendKeys('Science: Computers');
@@ -97,7 +97,7 @@ class DesafioQACIT {
         await (await this.driver!.findElement(By.css('#query ~ button'))).click();
 
         console.log('- Aguardando resultados');
-        await this.awaitPageLoads('https://opentdb.com/browse.php?query=Science%3A+Computers&type=Question#');
+        await this.awaitPageRedirects('https://opentdb.com/browse.php?query=Science%3A+Computers&type=Question#');
 
         console.log('- Buscando mensagem de erro "No questions found."');
         const alertMessage: string = await (await this.driver!.findElement(By.css('.container > .alert.alert-danger'))).getText();
@@ -125,7 +125,7 @@ class DesafioQACIT {
         await (await this.driver!.findElement(By.partialLinkText('BROWSE'))).click();
         
         console.log('- Aguardando redirecionamento');
-        await this.awaitPageLoads('https://opentdb.com/browse.php', 10000);
+        await this.awaitPageRedirects('https://opentdb.com/browse.php', 10000);
         
         console.log('- Inserindo o termo desejado "Science: Computers" no campo de busca');
         await (await this.driver!.findElement(By.id('query'))).sendKeys('Science: Computers');
@@ -137,7 +137,7 @@ class DesafioQACIT {
         await (await this.driver!.findElement(By.css('#query ~ button'))).click();
 
         console.log('- Aguardando resultados');
-        await this.awaitPageLoads('https://opentdb.com/browse.php?query=Science%3A+Computers&type=Category#');
+        await this.awaitPageRedirects('https://opentdb.com/browse.php?query=Science%3A+Computers&type=Category#');
 
         console.log('- Verificando quantidade (esperado 25 resultados)');
         const table: WebElement = await this.driver!.findElement(By.css('.container > h2 ~ .table'));
@@ -169,7 +169,7 @@ class DesafioQACIT {
         await (await this.driver!.findElement(By.partialLinkText('LOGIN'))).click();
         
         console.log('- Aguardando redirecionamento');
-        await this.awaitPageLoads('https://opentdb.com/login.php', 10000);
+        await this.awaitPageRedirects('https://opentdb.com/login.php', 10000);
 
         console.log('- Inserindo o nome de usuário inexistente "UsuarioTeste" no campo de nome');
         await (await this.driver!.findElement(By.id('username'))).sendKeys('UsuarioTeste');
