@@ -28,7 +28,7 @@ Precisamos fazer uma busca na categoria por Science: Computers e verificar s
 - **Funcionalidade** :  verificar a listagem de questões se o controle de paginação irá aparecer.
 - **Cenário**: fazer uma busca por Science: Computers
 - **Dado** que vou em comportamento                                      
-- **E** mudo de categoria 
+- **E** mudo para a categoria Science: Computers 
 - **Quando** aperto para buscar 
 - **Então** vizualizo o controle de paginação e os 25 itens 
 
