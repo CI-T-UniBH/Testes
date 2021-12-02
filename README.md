@@ -17,7 +17,7 @@ Alcançar e validar as funcionalidades pré-definidas do site [OpenTDB](https://
 ## Instalação
 
 1. Clone este projeto em sua máquina
-2. Dentro do diretório do projeto execute o seguinte comando
+2. Dentro do diretório deste projeto execute o seguinte comando
 ```
 npm install
 ```
@@ -37,9 +37,9 @@ npm start
 
 ## Tecnologias
 
-Pela simplicidade e portabilidade de desenvolvimento, este projeto escolheu TypeScript para execução dos testes e o Docker para criação do servidor de testes Selenium, para mais facilidade.
+Pela simplicidade de desenvolvimento, foi escolhido para execução dos testes deste projeto o TypeScript, e para criação do servidor de testes Selenium, o Docker, para mais versatilidade.
 
-A imagem oficial do Selenium com Chrome foi usada como base do Docker.
+A imagem escolhida do Docker foi a oficial do Selenium, com o driver do Chrome.
 
 ## Autores
 
