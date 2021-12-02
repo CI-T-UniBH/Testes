@@ -6,7 +6,44 @@ Alcançar e validar as funcionalidades pré-definidas do site [OpenTDB](https://
 
 ## Cenários de Testes
 
+## 1° Caso 
 
+### Precisamos iniciar uma busca no Banco de Questões e essa busca por questão seja inexistente e no final mostrará uma mensagem.
+
+#### Temos o seguinte cenário, escrito em Gherkin, que devemos automatizar: 
+
+- **Funcionalidade**: Busca no Banco de Questões
+- **Cenário**: Busca por questão inexistente
+- **Dado** que navego para a página de busca do banco de questões
+- **E** digito 'Science: Computers' no campo de busca
+- **Quando** clico no botão de buscar
+- **Então** visualizo uma mensagem de erro com o texto 'No questions found.'
+
+## 2° Caso
+
+### Agora, estamos com a seguinte informação de uma novo cenário que temos que testar para o usuário final 
+
+#### Precisamos fazer uma busca na categoria por Science: Computers e verificar se a listagem de questões está com 25 itens e se o controle de paginação irá aparecer.
+
+- **Funcionalidade** :  verificar se a listagem de questões se o controle de paginação irá aparecer.
+- **Cenário**: fazer uma busca
+- **Dado** que digito Science: Computers 
+- **E** clico em categoria 
+- **Quando** aperto para buscar 
+- **Então** aparece a mensagem No questions found.
+
+## 3° Caso 
+
+### Vamos criar um novo cenário que não foi descrito ainda, criando esse cenário do zero 
+
+#### Um novo usuário quer se cadastrar no site, mais não possuí um cadastro e tenta acessar mesmo assim 
+
+- **Funcionalidade**: login 
+- **Cenário**: login invalido 
+- **Dado** que o usuário clique em login
+- **E** preenche nome e senha 
+- **Quando** clico em sign in 
+- **Então** aparecera ERROR! Logging In Failed.
 
 ## Pré-requisitos
 
