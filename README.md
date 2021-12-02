@@ -10,7 +10,7 @@ Este projeto é um exemplo de automações para testes, que tem como objetivo al
 
 #### Temos o seguinte cenário, escrito em Gherkin, que devemos automatizar: 
 
-#### Precisamos iniciar uma busca no Banco de Questões, devemos validar se essa busca por questões traz resultado inexistente e se no final mostrará uma mensagem de erro.
+Precisamos iniciar uma busca no Banco de Questões, devemos validar se essa busca por questões traz resultado inexistente e se no final mostrará uma mensagem de erro.
 
 - **Funcionalidade**: Busca no Banco de Questões
 - **Cenário**: Busca por questão inexistente
@@ -23,7 +23,7 @@ Este projeto é um exemplo de automações para testes, que tem como objetivo al
 
 #### Agora, estamos com a seguinte informação de um novo cenário que temos que testar para o usuário final:
 
-#### Precisamos fazer uma busca na categoria por Science: Computers e verificar se a listagem de questões está com 25 itens e se o controle de paginação irá aparecer.
+Precisamos fazer uma busca na categoria por Science: Computers e verificar se a listagem de questões está com 25 itens e se o controle de paginação irá aparecer.
 
 - **Funcionalidade** :  verificar se a listagem de questões se o controle de paginação irá aparecer.
 - **Cenário**: fazer uma busca
@@ -36,7 +36,7 @@ Este projeto é um exemplo de automações para testes, que tem como objetivo al
 
 #### Vamos criar um novo cenário que não foi descrito ainda, criando esse cenário do zero:
 
-#### Um novo usuário quer se cadastrar no site, mas não possui um cadastro e tenta acessar mesmo assim 
+Um novo usuário quer se cadastrar no site, mas não possui um cadastro e tenta acessar mesmo assim.
 
 - **Funcionalidade**: fazer login no sistema
 - **Cenário**: login inválido 
