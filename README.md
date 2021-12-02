@@ -25,12 +25,12 @@ Precisamos iniciar uma busca no Banco de Questões, devemos validar se essa busc
 
 Precisamos fazer uma busca na categoria por Science: Computers e verificar se a listagem de questões está com 25 itens e se o controle de paginação irá aparecer.
 
-- **Funcionalidade** :  verificar se a listagem de questões se o controle de paginação irá aparecer.
-- **Cenário**: fazer uma busca
-- **Dado** que digito Science: Computers 
-- **E** clico em categoria 
+- **Funcionalidade** :  verificar a listagem de questões se o controle de paginação irá aparecer.
+- **Cenário**: fazer uma busca por Science: Computers
+- **Dado** que vou em comportamento                                      
+- **E** mudo de categoria 
 - **Quando** aperto para buscar 
-- **Então** aparece a mensagem No questions found.
+- **Então** vizualizo o controle de paginação e os 25 itens 
 
 ### 3° Caso 
 
