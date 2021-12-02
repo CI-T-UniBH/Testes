@@ -132,7 +132,7 @@ class DesafioQACIT {
         console.log('Inserindo o termo desejado "Science: Computers" no campo de busca');
         await (await this.driver!.findElement(By.id('query'))).sendKeys('Science: Computers');
 
-        console.log('Alterando tipo de filtragem de "Question" para "Category"');
+        console.log('Alterando tipo de filtragem padrão de "Question" para "Category"');
         await (await this.driver!.findElement(By.id('type'))).sendKeys(Key.ENTER, Key.ARROW_DOWN, Key.ARROW_DOWN, Key.ENTER);
 
         console.log('Pressionando botão de filtro');
@@ -141,7 +141,7 @@ class DesafioQACIT {
         console.log('Aguardando resultados');
         await this.awaitPageRedirects('https://opentdb.com/browse.php?query=Science%3A+Computers&type=Category#');
 
-        console.log('Verificando quantidade (esperado 25 resultados)');
+        console.log('Verificando quantidade de questões encontradas (esperado 25 resultados)');
         const table: WebElement = await this.driver!.findElement(By.css('.container > h2 ~ .table'));
         const rowsCount: number = await (await table.findElements(By.css('tbody > tr'))).length ;
         
