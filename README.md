@@ -2,15 +2,15 @@
 
 ## Objetivo
 
-Alcançar e validar as funcionalidades pré-definidas do site [OpenTDB](https://opentdb.com/).
+Este projeto é um exemplo de automações para testes, que tem como objetivo alcançar e validar algumas funcionalidades pré-definidas do site [OpenTDB](https://opentdb.com/).
 
 ## Cenários de Testes
 
-## 1° Caso 
-
-### Precisamos iniciar uma busca no Banco de Questões e essa busca por questão seja inexistente e no final mostrará uma mensagem.
+### 1° Caso 
 
 #### Temos o seguinte cenário, escrito em Gherkin, que devemos automatizar: 
+
+#### Precisamos iniciar uma busca no Banco de Questões, devemos validar se essa busca por questões traz resultado inexistente e se no final mostrará uma mensagem de erro.
 
 - **Funcionalidade**: Busca no Banco de Questões
 - **Cenário**: Busca por questão inexistente
@@ -19,9 +19,9 @@ Alcançar e validar as funcionalidades pré-definidas do site [OpenTDB](https://
 - **Quando** clico no botão de buscar
 - **Então** visualizo uma mensagem de erro com o texto 'No questions found.'
 
-## 2° Caso
+### 2° Caso
 
-### Agora, estamos com a seguinte informação de uma novo cenário que temos que testar para o usuário final 
+#### Agora, estamos com a seguinte informação de um novo cenário que temos que testar para o usuário final:
 
 #### Precisamos fazer uma busca na categoria por Science: Computers e verificar se a listagem de questões está com 25 itens e se o controle de paginação irá aparecer.
 
@@ -32,18 +32,18 @@ Alcançar e validar as funcionalidades pré-definidas do site [OpenTDB](https://
 - **Quando** aperto para buscar 
 - **Então** aparece a mensagem No questions found.
 
-## 3° Caso 
+### 3° Caso 
 
-### Vamos criar um novo cenário que não foi descrito ainda, criando esse cenário do zero 
+#### Vamos criar um novo cenário que não foi descrito ainda, criando esse cenário do zero:
 
-#### Um novo usuário quer se cadastrar no site, mais não possuí um cadastro e tenta acessar mesmo assim 
+#### Um novo usuário quer se cadastrar no site, mas não possui um cadastro e tenta acessar mesmo assim 
 
-- **Funcionalidade**: login 
-- **Cenário**: login invalido 
+- **Funcionalidade**: fazer login no sistema
+- **Cenário**: login inválido 
 - **Dado** que o usuário clique em login
-- **E** preenche nome e senha 
+- **E** preenche nome e senha inexistentes
 - **Quando** clico em sign in 
-- **Então** aparecera ERROR! Logging In Failed.
+- **Então** visualizo uma mensagem de erro com o texto 'ERROR! Logging In Failed.'
 
 ## Pré-requisitos
 
