@@ -76,7 +76,6 @@ npm start
 
 Pela simplicidade de desenvolvimento, foi escolhido para execução dos testes deste projeto o TypeScript, e para criação do servidor de testes Selenium, o Docker, para mais versatilidade.
 
-A imagem escolhida do Docker foi a oficial do Selenium, com o driver do Chrome.
 
 ## Autores
 
