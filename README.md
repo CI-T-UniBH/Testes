@@ -12,11 +12,11 @@ Este projeto é um exemplo de automações para testes, que tem como objetivo al
 
 Precisamos iniciar uma busca no Banco de Questões, devemos validar se essa busca por questões traz resultado inexistente e se no final mostrará uma mensagem de erro.
 
-- **Funcionalidade**: Busca no Banco de Questões
-- **Cenário**: Busca por questão inexistente
-- **Dado** que navego para a página de busca do banco de questões
-- **E** digito 'Science: Computers' no campo de busca
-- **Quando** clico no botão de buscar
+- **Funcionalidade**: Busca no Banco de Questões;
+- **Cenário**: Busca por questão inexistente;
+- **Dado** que navego para a página de busca do banco de questões;
+- **E** digito 'Science: Computers' no campo de busca;
+- **Quando** clico no botão de buscar;
 - **Então** visualizo uma mensagem de erro com o texto 'No questions found.'
 
 ### 2° Caso
@@ -25,12 +25,12 @@ Precisamos iniciar uma busca no Banco de Questões, devemos validar se essa busc
 
 Precisamos fazer uma busca na categoria por Science: Computers e verificar se a listagem de questões está com 25 itens e se o controle de paginação irá aparecer.
 
-- **Funcionalidade** :  verificar a listagem de questões se o controle de paginação irá aparecer.
-- **Cenário**: fazer uma busca por Science: Computers
-- **Dado** que vou em comportamento                                      
-- **E** mudo para a categoria Science: Computers 
-- **Quando** aperto para buscar 
-- **Então** vizualizo o controle de paginação e os 25 itens 
+- **Funcionalidade** :  verificar a listagem de questões se o controle de paginação irá aparecer;
+- **Cenário**: fazer uma busca por Science: Computers;
+- **Dado** que vou em comportamento     ;                                 
+- **E** mudo para a categoria Science: Computers ;
+- **Quando** aperto para buscar ;
+- **Então** vizualizo o controle de paginação e os 25 itens .
 
 ### 3° Caso 
 
@@ -38,11 +38,11 @@ Precisamos fazer uma busca na categoria por Science: Computers e verificar s
 
 Um novo usuário quer se cadastrar no site, mas não possui um cadastro e tenta acessar mesmo assim.
 
-- **Funcionalidade**: fazer login no sistema
-- **Cenário**: login inválido 
-- **Dado** que o usuário clique em login
-- **E** preenche nome e senha inexistentes
-- **Quando** clico em sign in 
+- **Funcionalidade**: fazer login no sistema;
+- **Cenário**: login inválido ;
+- **Dado** que o usuário clique em login;
+- **E** preenche nome e senha inexistentes;
+- **Quando** clico em sign in ;
 - **Então** visualizo uma mensagem de erro com o texto 'ERROR! Logging In Failed.'
 
 ## Pré-requisitos
